@@ -114,25 +114,127 @@ def generate_myanmar_text(coordinates):
         str([60, 150, 70, 160, 0]): "ၤ",   # great ha
         str([75, 150, 85, 160, 0]): "ၥ",   # voicing
         str([90, 150, 100, 160, 0]): "ၦ",  # voicing
-    }
-    
-    result = ""
-    for coord in coordinates:
-        coord_key = str(coord)
-        if coord_key in myanmar_chars:
-            result += myanmar_chars[coord_key]
-        else:
-            result += "?"
-            
-    return result
+  
 
 # ตัวอย่างการใช้งาน
-test_coords = [
+
     [15, 45, 25, 55, 0],    # က
     [45, 105, 55, 115, 0],  # ွ
     [60, 105, 70, 115, 0],  # ှ
     [15, 60, 25, 70, 0]     # ာ
-]
+
 
 result = generate_myanmar_text(test_coords)
 print(f"Myanmar text: {result}")  # จะแสดงผลเป็น: ကွှာ
+
+
+        # [ชุดอักษรเดิมทั้งหมดยังคงอยู่ เพิ่มเติมดังนี้...]
+
+        # เครื่องหมายเสริมสำหรับการเขียนคำยืมจากภาษาอื่น
+        str([15, 165, 25, 175, 0]): "ၧ",   # great ja
+        str([30, 165, 40, 175, 0]): "ၨ",   # great jha
+        str([45, 165, 55, 175, 0]): "ၩ",   # great nya
+        str([60, 165, 70, 175, 0]): "ၪ",   # great ta
+        str([75, 165, 85, 175, 0]): "ၫ",   # great tha
+        str([90, 165, 100, 175, 0]): "ၬ",  # great dha
+        str([105, 165, 115, 175, 0]): "ၭ",  # great ba
+        str([120, 165, 130, 175, 0]): "ၮ",  # great pha
+        str([135, 165, 145, 175, 0]): "ၯ",  # great fa
+        str([150, 165, 160, 175, 0]): "ၰ",  # great bha
+
+        # เครื่องหมายกำกับเสียงพิเศษเพิ่มเติม
+        str([15, 180, 25, 190, 0]): "ၱ",   # ssa
+        str([30, 180, 40, 190, 0]): "ၲ",   # great sa
+        str([45, 180, 55, 190, 0]): "ၳ",   # great ha
+        str([60, 180, 70, 190, 0]): "ၴ",   # great ha
+        str([75, 180, 85, 190, 0]): "ၵ",   # ka
+        str([90, 180, 100, 190, 0]): "ၶ",  # kha
+        str([105, 180, 115, 190, 0]): "ၷ",  # ga
+        str([120, 180, 130, 190, 0]): "ၸ",  # ja
+        str([135, 180, 145, 190, 0]): "ၹ",  # jha
+        str([150, 180, 160, 190, 0]): "ၺ",  # nya
+
+        # เครื่องหมายเพิ่มเติมสำหรับภาษามอญ
+        str([15, 195, 25, 205, 0]): "ၻ",   # mon tsa
+        str([30, 195, 40, 205, 0]): "ၼ",   # mon na
+        str([45, 195, 55, 205, 0]): "ၽ",   # mon ma
+        str([60, 195, 70, 205, 0]): "ၾ",   # mon la
+        str([75, 195, 85, 205, 0]): "ၿ",   # mon ba
+        str([90, 195, 100, 205, 0]): "ႀ",  # mon pha
+        str([105, 195, 115, 205, 0]): "ႁ",  # mon da
+        str([120, 195, 130, 205, 0]): "ႂ",  # mon ma
+        str([135, 195, 145, 205, 0]): "ႃ",  # mon da
+        str([150, 195, 160, 205, 0]): "ႄ",  # mon e
+
+        # เครื่องหมายเสริมสำหรับภาษาชาน
+        str([15, 210, 25, 220, 0]): "ႅ",   # shan nga
+        str([30, 210, 40, 220, 0]): "ႆ",   # shan fa
+        str([45, 210, 55, 220, 0]): "ႇ",   # shan tone-1
+        str([60, 210, 70, 220, 0]): "ႈ",   # shan tone-2
+        str([75, 210, 85, 220, 0]): "ႉ",   # shan tone-3
+        str([90, 210, 100, 220, 0]): "ႊ",  # shan tone-4
+        str([105, 210, 115, 220, 0]): "ႋ",  # shan tone-5
+        str([120, 210, 130, 220, 0]): "ႌ",  # shan tone-6
+        str([135, 210, 145, 220, 0]): "ႍ",  # shan council emphatic tone
+        str([150, 210, 160, 220, 0]): "ႎ",  # shan council tone-3
+
+        # เครื่องหมายเสริมสำหรับภาษารัฐฉาน
+        str([15, 225, 25, 235, 0]): "႐",   # shan digit zero
+        str([30, 225, 40, 235, 0]): "႑",   # shan digit one
+        str([45, 225, 55, 235, 0]): "႒",   # shan digit two
+        str([60, 225, 70, 235, 0]): "႓",   # shan digit three
+        str([75, 225, 85, 235, 0]): "႔",   # shan digit four
+        str([90, 225, 100, 235, 0]): "႕",  # shan digit five
+        str([105, 225, 115, 235, 0]): "႖",  # shan digit six
+        str([120, 225, 130, 235, 0]): "႗",  # shan digit seven
+        str([135, 225, 145, 235, 0]): "႘",  # shan digit eight
+        str([150, 225, 160, 235, 0]): "႙",  # shan digit nine
+
+        # เครื่องหมายวรรณยุกต์และการออกเสียงพิเศษเพิ่มเติม
+        str([15, 240, 25, 250, 0]): "ႚ",   # rumai palaung tone-5
+        str([30, 240, 40, 250, 0]): "ႛ",   # rumai palaung tone-5
+        str([45, 240, 55, 250, 0]): "ႜ",   # rumai palaung tone-5
+        str([60, 240, 70, 250, 0]): "ႝ",   # aiton a
+        str([75, 240, 85, 250, 0]): "႞",   # aiton ai
+        str([90, 240, 100, 250, 0]): "႟",  # aiton u
+
+        # เครื่องหมายตัวเลขพิเศษเพิ่มเติม
+        str([15, 255, 25, 265, 0]): "႐",   # myanmar shan digit zero
+        str([30, 255, 40, 265, 0]): "႑",   # myanmar shan digit one
+        str([45, 255, 55, 265, 0]): "႒",   # myanmar shan digit two
+        str([60, 255, 70, 265, 0]): "႓",   # myanmar shan digit three
+        str([75, 255, 85, 265, 0]): "႔",   # myanmar shan digit four
+        str([90, 255, 100, 265, 0]): "႕",  # myanmar shan digit five
+        str([105, 255, 115, 265, 0]): "႖",  # myanmar shan digit six
+        str([120, 255, 130, 265, 0]): "႗",  # myanmar shan digit seven
+        str([135, 255, 145, 265, 0]): "႘",  # myanmar shan digit eight
+        str([150, 255, 160, 265, 0]): "႙",  # myanmar shan digit nine
+
+        # เครื่องหมายพิเศษสำหรับภาษาพม่าโบราณเพิ่มเติม
+        str([15, 270, 25, 280, 0]): "္က",   # kinzi
+        str([30, 270, 40, 280, 0]): "္ခ",   # kinzi kha
+        str([45, 270, 55, 280, 0]): "္ဂ",   # kinzi ga
+        str([60, 270, 70, 280, 0]): "္ဃ",   # kinzi gha
+        str([75, 270, 85, 280, 0]): "္င",   # kinzi nga
+        str([90, 270, 100, 280, 0]): "္စ",  # kinzi ca
+        str([105, 270, 115, 280, 0]): "္ဆ",  # kinzi cha
+        str([120, 270, 130, 280, 0]): "္ဇ",  # kinzi ja
+        str([135, 270, 145, 280, 0]): "္ဈ",  # kinzi jha
+        str([150, 270, 160, 280, 0]): "္ည",  # kinzi nya
+
+        # สัญลักษณ์พิเศษเพิ่มเติม
+        str([15, 285, 25, 295, 0]): "၊",    # little section
+        str([30, 285, 40, 295, 0]): "။",    # section
+        str([45, 285, 55, 295, 0]): "၌",    # locative
+        str([60, 285, 70, 295, 0]): "၍",    # completed
+        str([75, 285, 85, 295, 0]): "၎",    # aforementioned
+        str([90, 285, 100, 295, 0]): "၏",   # genitive
+        str([105, 285, 115, 295, 0]): "ဿ",  # great sa
+
+
+# ตัวอย่างการใช้งาน
+
+    [15, 195, 25, 205, 0],  # ၻ (mon tsa)
+    [30, 195, 40, 205, 0],  # ၼ (mon na)
+    [45, 210, 55, 220, 0],  # ႇ (shan tone-1)
+    [60, 210, 70, 220, 0]   # ႈ (shan tone-2)
